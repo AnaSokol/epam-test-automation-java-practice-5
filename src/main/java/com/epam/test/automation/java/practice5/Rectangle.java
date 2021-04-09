@@ -43,8 +43,9 @@ public class Rectangle {
     }
 
     public void replaceSides() {
-        //TODO: Delete line below and write your own solution;
-        throw new UnsupportedOperationException();
+        double temp = this.sideA;
+        this.sideA = this.sideB;
+        this.sideB = temp;
     }
 
 }
