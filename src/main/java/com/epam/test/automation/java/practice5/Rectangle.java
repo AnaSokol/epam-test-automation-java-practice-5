@@ -1,77 +1,47 @@
 package com.epam.test.automation.java.practice5;
 
 public class Rectangle {
+    private double sideA;
+	private double sideB;
 
     public Rectangle(double a, double b) {
-        //TODO: Implement constructor with 'a' and 'b' parameters;
-        //TODO: set sideA and sideB to specified values;
+        if (a > 0 && b > 0) { 
+			this.sideA = a;		
+		    this.sideB = b;
+		}
+		else
+			throw new IllegalArgumentException();
     }
 
     public Rectangle(double a) {
-        //TODO: Implement constructor with 'a' parameter;
-        //TODO: set sideB to default value;
+        this(a, 5);
     }
 
     public Rectangle() {
-        //TODO: Implement default constructor;
-        //TODO: set sideA and sideB to default values;
+        this(4, 3);
     }
-
-    /**
-     * <summary>
-     * Implement code according to description of task.
-     * </summary>
-     */
+   
     public double getSideA() {
-        //TODO: Delete line below and write your own solution;
-        throw new UnsupportedOperationException();
+        return this.sideA;
     }
-
-    /**
-     * <summary>
-     * Implement code according to description of task.
-     * </summary>
-     */
+   
     public double getSideB() {
-        //TODO: Delete line below and write your own solution;
-        throw new UnsupportedOperationException();
+        return this.sideB;
     }
 
-    /**
-     * <summary>
-     * Implement code according to description of task.
-     * </summary>
-     */
     public double area() {
-        //TODO: Delete line below and write your own solution;
-        throw new UnsupportedOperationException();
+        return this.sideA*this.sideB;
     }
-
-    /**
-     * <summary>
-     * Implement code according to description of task.
-     * </summary>
-     */
+    
     public double perimeter() {
-        //TODO: Delete line below and write your own solution;
-        throw new UnsupportedOperationException();
+        return 2*(this.sideA+this.sideB);
     }
 
-    /**
-     * <summary>
-     * Implement code according to description of task.
-     * </summary>
-     */
     public boolean isSquare() {
-        //TODO: Delete line below and write your own solution;
-        throw new UnsupportedOperationException();
+        if (this.sideA == this.sideB) return true;
+		return false;
     }
 
-    /**
-     * <summary>
-     * Implement code according to description of task.
-     * </summary>
-     */
     public void replaceSides() {
         //TODO: Delete line below and write your own solution;
         throw new UnsupportedOperationException();
