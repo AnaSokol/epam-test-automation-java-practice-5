@@ -14,7 +14,7 @@ public class RectangleTest {
 		double result = a*b;
 		Rectangle r = new Rectangle (a,b);
 		double actualResult = r.area();
-		assertTrue(result==actualResult);
+		assertEquals(result, actualResult, 0);
 	}
 	
 	@Test
@@ -24,7 +24,7 @@ public class RectangleTest {
 		double result = (a+b)*2;
 		Rectangle r = new Rectangle (a,b);
 		double actualResult = r.perimeter();
-		assertTrue(result==actualResult);
+		assertEquals(result, actualResult, 0);
 	}
 	
 	@Test
@@ -34,7 +34,7 @@ public class RectangleTest {
 		boolean result = a==b;
 		Rectangle r = new Rectangle (a,b);
 		boolean actualResult = r.isSquare();
-		assertTrue(result==actualResult);
+		assertEquals(result, actualResult);
 	}
 	@Test
 	public void testRectangleIsNotSquare() {
@@ -43,7 +43,7 @@ public class RectangleTest {
 		boolean result = a==b;
 		Rectangle r = new Rectangle (a,b);
 		boolean actualResult = r.isSquare();
-		assertTrue(result==actualResult);
+		assertEquals(result, actualResult);
 	}
 
 }
